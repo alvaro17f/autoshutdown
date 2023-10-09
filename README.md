@@ -52,7 +52,7 @@ It will display a pop-up like this:
 ### Cron
 
 ```sh
-PATH="/usr/local/bin:/usr/bin:/bin
+PATH="/usr/local/bin:/usr/bin:/bin"
 
 0 2 * * 1-5 autoshutdown
 ```
