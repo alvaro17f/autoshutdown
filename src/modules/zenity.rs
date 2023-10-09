@@ -1,9 +1,13 @@
 use crate::utils::get_current_shell::get_current_shell;
 use anyhow::Result;
-use std::process::{Command, Stdio};
+use std::{
+    env,
+    process::{Command, Stdio},
+};
 use system_shutdown::shutdown;
 
 pub fn zenity() -> Result<()> {
+    env::set_var("DISPLAY", ":0");
     let shell = get_current_shell()?;
     let mut child = Command::new(shell)
         .arg("-c")
